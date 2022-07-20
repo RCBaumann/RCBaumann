@@ -1,4 +1,6 @@
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -22,15 +24,20 @@ public class App {
         List<Map<String, String>> listMovies = parser.parse(body);        
 
         // exibir e manipular dados da API
+        var builderSticker = new StickerMaker();
         for (Map<String,String> movie : listMovies) {
+            
+            String urlImage = movie.get("image");
+            String title = movie.get("title");
+            
+            InputStream inputStream = new URL (urlImage).openStream();            
+            String nameImg = title + ".png";
+
+            builderSticker.makeStick(inputStream, nameImg);
+
+
             System.out.println("Titulo: " + movie.get("title"));
             System.out.println();
-            System.out.println("Imagem: " + movie.get("image"));
-            System.out.println();
-            System.out.println("Avaliação: " + movie.get("imDbRating"));
-            System.out.println();
         }
-
-
     }
 }
