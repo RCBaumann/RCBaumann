@@ -24,7 +24,9 @@ public class App {
         // exibir e manipular dados da API
         for (Map<String,String> movie : listMovies) {
             System.out.println("Titulo: " + movie.get("title"));
+            System.out.println();
             System.out.println("Imagem: " + movie.get("image"));
+            System.out.println();
             System.out.println("Avaliação: " + movie.get("imDbRating"));
             System.out.println();
         }
