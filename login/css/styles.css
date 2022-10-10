@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    color: #fff;
 }
 
 header {
@@ -91,4 +92,104 @@ main form .password-container i {
 
 main form .password-container #eye {
     display: none;
+}
+
+main form .passwor-infos {
+    width: 90%;
+    margin-top: 3%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main form .passwor-infos a {
+    transition: 0.2s ease-in-out;
+}
+
+main form .passwor-infos a :hover {
+    color: #18acfe;
+}
+
+main form button {
+    background-color: #18acfe;
+    width: 90%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin-top: 10%;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out ;
+}
+
+main form button :hover {
+    background: #fff;
+    color: #18acfe;
+}
+
+main form .links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+main form .links-container span {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+main form .links-container aside {
+    margin-top: 5%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main form .links-container aside i {
+    font-size: 1.6em;
+    background-color: #fff;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main form .links-container aside .google {
+    color: #e34133;
+}
+
+main form .links-container aside .google :hover {
+    background-color: #e34133;
+    color: #fff
+}
+
+main form .links-container aside .linkedin {
+    color: #0a66c2;
+}
+
+main form .links-container aside .linkedin :hover {
+    background-color: #0a66c2;
+    color: #fff
+}
+
+main form .links-container aside .facebook {
+    color: #1a40f9;
+}
+
+main form .links-container aside .facebook :hover {
+    background-color: #1a40f9;
+    color: #fff
 }
